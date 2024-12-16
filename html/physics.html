@@ -1,0 +1,78 @@
+<!--///////////PROPERTY OF C.J MAPE, 2024 ©///////////-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses | Physics for Computing</title>
+    <link rel="stylesheet" href="../css/csa.css">
+    <link rel="icon" href="../images/logo/icon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<!--FONT POPPINS-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<!--NAV-->
+<body>
+    <nav>
+        <a href="../index.html">
+            <img src="../images/logo/logo.png" class="logo" alt="Logo">
+        </a>
+        <ul class="sidebar">
+            <li onclick="hideSidebar()"> 
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff">
+                    <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+                </svg></a>
+            </li>
+            <li><a href="../html/courses.html">Courses</a></li>
+            <li><a href="../html/resources.html">Resources</a></li>
+            <li><a href="../html/tools.html">Tools</a></li>
+            <li><a href="../html/about.html">About</a></li>
+            <li><a href="../html/faq.html">FAQ</a></li>
+            <li><a href="../html/log-in.html">Log In</a></li>
+        </ul>
+        <ul>
+            <li class="hideOnMobile"><a href="../html/courses.html">Courses</a></li>
+            <li class="hideOnMobile"><a href="../html/resources.html">Resources</a></li>
+            <li class="hideOnMobile"><a href="../html/tools.html">Tools</a></li>
+            <li class="hideOnMobile"><a href="../html/about.html">About</a></li>
+            <li class="hideOnMobile"><a href="../html/faq.html">FAQ</a></li>
+            <li class="hideOnMobile"><a href="../html/log-in.html">Log In</a></li>
+            <li class="menu-button" onclick="showSidebar()">
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff">
+                    <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+                </svg></a>
+            </li>
+        </ul>
+    </nav>
+<!--FILES-->
+    <div class="cf">
+        <h2>PHYSICS FOR COMPUTING DOWNLOADABLE FILES:</h2>
+        <ul>
+            <li><a href="courses files/Physics for Computing/midterms/Lesson 1 heat.docx" download>LESSON 1: HEAT</a></li>
+            <li><a href="courses files/Physics for Computing/midterms/LESSON 2 ELECTRICITY.docx" download>LESSON 2: ELECTRICITY</a></li>
+            <li><a href="courses files/Physics for Computing/midterms/LESSON 3 VACUUM TUBES.docx" download>LESSON 3: VACUUM TUBES</a></li>
+            <li><a href="courses files/Physics for Computing/midterms/LESSON 4 SEMICONDUCTORS.docx" download>LESSON 4: SEMICONDUCTORS</a></li>
+            <li><a href="courses files/Physics for Computing/midterms/LESSON 5 TRANSISTORS.docx" download>LESSON 5: TRANSISTORS</a></li>
+            <li><a href="courses files/Physics for Computing/midterms/LESSON 6 MOSFET.docx" download>LESSON 6: MOSFET</a></li>
+            <li><a href="courses files/Physics for Computing/midterms/LESSON 7 CMOS.docx" download>LESSON 7: CMOS</a></li>
+            <li><a href="courses files/Physics for Computing/midterms/LESSON 8 PROCESSOR.docx" download>LESSON 8: PROCESSOR</a></li>
+            <li><a href="courses files/Physics for Computing/finals/P64Comp Lecture 9, Storage Devices.pdf" download>LESSON 9: STORAGE DEVICES</a></li>
+            <li><a href="courses files/Physics for Computing/finals/P64Comp Lecture 10, Display Monitors.pdf" download>LESSON 10: DISPLAY MONITORS</a></li>
+            <li><a href="courses files/Physics for Computing/finals/P64Comp Lecture 11, Touch Sensors.pdf" download>LESSON 11: TOUCH SENSORS</a></li>
+            <li><a href="courses files/Physics for Computing/finals/P64Comp Lecture 12, Inertial Sensors.pdf" download>LESSON 12: INERTIAL SENSORS</a></li>
+            <li><a href="courses files/Physics for Computing/finals/P64Comp Lecture 13, Image Sensors.pdf" download>LESSON 13: IMAGE SENSORS</a></li>
+            <li><a href="courses files/Physics for Computing/finals/P64Comp Lecture 14, Other Sensors.pdf" download>LESSON 14: OTHER SENSORS</a></li>
+        </ul>
+    </div>
+<!--NAV-SCRIPT-->
+    <script>
+        function showSidebar() {
+            document.querySelector('.sidebar').classList.add('active');
+        }
+        function hideSidebar() {
+            document.querySelector('.sidebar').classList.remove('active');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!--///////////PROPERTY OF C.J MAPE, 2024 ©///////////-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses | Mathematics in the Modern World</title>
+    <link rel="stylesheet" href="../css/csa.css">
+    <link rel="icon" href="../images/logo/icon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<!--FONT POPPINS-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<!--NAV-->
+<body>
+    <nav>
+        <a href="../index.html">
+            <img src="../images/logo/logo.png" class="logo" alt="Logo">
+        </a>
+        <ul class="sidebar">
+            <li onclick="hideSidebar()"> 
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff">
+                    <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+                </svg></a>
+            </li>
+            <li><a href="../html/courses.html">Courses</a></li>
+            <li><a href="../html/resources.html">Resources</a></li>
+            <li><a href="../html/tools.html">Tools</a></li>
+            <li><a href="../html/about.html">About</a></li>
+            <li><a href="../html/faq.html">FAQ</a></li>
+            <li><a href="../html/log-in.html">Log In</a></li>
+        </ul>
+        <ul>
+            <li class="hideOnMobile"><a href="../html/courses.html">Courses</a></li>
+            <li class="hideOnMobile"><a href="../html/resources.html">Resources</a></li>
+            <li class="hideOnMobile"><a href="../html/tools.html">Tools</a></li>
+            <li class="hideOnMobile"><a href="../html/about.html">About</a></li>
+            <li class="hideOnMobile"><a href="../html/faq.html">FAQ</a></li>
+            <li class="hideOnMobile"><a href="../html/log-in.html">Log In</a></li>
+            <li class="menu-button" onclick="showSidebar()">
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff">
+                    <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+                </svg></a>
+            </li>
+        </ul>
+    </nav>
+<!--FILES-->
+    <div class="cf">
+        <h2>MATHEMATICS IN THE MODERN WORLD</h2>
+        <h2>DOWNLOADABLE FILES:</h2>
+        <ul>
+            <li><a href="courses files/Mathematics in the Modern World/Lessons(Midterms)/Mathematics in Nature and the World.pdf" download>LESSON 1: MATHEMATICS IN NATURE & THE WORLD</a></li>
+            <li><a href="courses files/Mathematics in the Modern World/Lessons(Midterms)/Mathematical Language and Symbols.pdf" download>LESSON 2: MATHEMATICAL LANGUAGE & SYMBOLS</a></li>
+            <li><a href="courses files/Mathematics in the Modern World/Lessons(Midterms)/Problem Solving and Reasoning.pdf" download>LESSON 3: PROBLEM SOLVING & REASONING</a></li>
+            <li><a href="courses files/Mathematics in the Modern World/Lessons(Midterms)/Measures of Central Tendency_.pdf" download>LESSON 4: MEASURES OF CENTRAL TENDENCY</a></li>
+            <li><a href="courses files/Mathematics in the Modern World/Lessons(Midterms)/Measures of Variability or Dispersion.pdf" download>LESSON 5: MEASURES OF VARIABILITY OR DISPERSION</a></li>
+            <li><a href="courses files/Mathematics in the Modern World/Lessons(Midterms)/Measures of Position.pdf" download>LESSON 6: MEASURES OF POSITION</a></li>
+            <li><a href="courses files/Mathematics in the Modern World/Lessons(Midterms)/Normal Distribution.pdf" download>LESSON 7: NORMAL DISTRIBUTION</a></li>
+    </div>
+<!--NAV-SCRIPT-->
+    <script>
+        function showSidebar() {
+            document.querySelector('.sidebar').classList.add('active');
+        }
+        function hideSidebar() {
+            document.querySelector('.sidebar').classList.remove('active');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!--///////////PROPERTY OF C.J MAPE, 2024 ©///////////-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <link rel="stylesheet" href="../css/log-in.css">
+    <link rel="icon" href="../images/logo/icon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!--FONT POPPINS-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <!--NAV BAR-->
+    <nav>
+        <a href="../index.html">
+            <img src="../images/logo/logo.png" class="logo" alt="Logo">
+        </a>
+        <ul class="sidebar">
+            <li onclick="hideSidebar()"> 
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff">
+                    <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+                </svg></a>
+            </li>
+            <li><a href="../html/courses.html">Courses</a></li>
+            <li><a href="../html/resources.html">Resources</a></li>
+            <li><a href="../html/tools.html">Tools</a></li>
+            <li><a href="../html/about.html">About</a></li>
+            <li><a href="../html/faq.html">FAQ</a></li>
+            <li><a href="../html/log-in.html">Log In</a></li>
+        </ul>
+        <ul>
+            <li class="hideOnMobile"><a href="../html/courses.html">Courses</a></li>
+            <li class="hideOnMobile"><a href="../html/resources.html">Resources</a></li>
+            <li class="hideOnMobile"><a href="../html/tools.html">Tools</a></li>
+            <li class="hideOnMobile"><a href="../html/about.html">About</a></li>
+            <li class="hideOnMobile"><a href="../html/faq.html">FAQ</a></li>
+            <li class="hideOnMobile"><a href="../html/log-in.html">Log In</a></li>
+            <li class="menu-button" onclick="showSidebar()">
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff">
+                    <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+                </svg></a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="login-container">
+        <h2>Log In</h2>
+        <form action="/login" method="POST">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            
+            <button type="submit">Log In</button>
+        </form>
+        <p>Don't have an account? <a href="/signup">Sign Up</a></p>
+    </div>
+    
+     <p class="footer">&copy; 2024 ITeach. All rights reserved.</p>
+    
+    <script>
+        function showSidebar() {
+            document.querySelector('.sidebar').classList.add('active');
+        }
+        function hideSidebar() {
+            document.querySelector('.sidebar').classList.remove('active');
+        }
+    </script>
+
+<script>
+    document.getElementById('login-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+
+        if (email && password) {
+            alert('Login successful (in a real-world app, this would be validated by the server).');
+        } else {
+            alert('Please enter both email and password');
+        }
+    });
+</script>
+
+<script src="/js/login.js"></script>
+</body>
+
+</body>
+</html>
