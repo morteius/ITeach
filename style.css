@@ -1,11 +1,14 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 /* BODY */
 body {
+    width: 100%:
     padding-top: 110px;
+    overflow-x: hidden; 
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -128,6 +131,8 @@ nav ul:not(.sidebar) li:hover a {
     margin-top: 80px;
     text-align: center;
     color: #070707e7;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 .hero {
     position: relative;
