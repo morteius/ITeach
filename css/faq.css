@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #7e7972, #a89480, #001F3F);
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+    color: #252525;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    font-size: large;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.219);
+    background-color: #001F3F;
+    padding: 10px 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    box-sizing: border-box;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+nav li {
+    margin-left: 29px;
+    position: relative;
+}
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+nav ul:not(.sidebar) li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #ffffff;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s ease;
+}
+nav ul:not(.sidebar) li:hover::after {
+    width: 100%;
+}
+nav ul:not(.sidebar) li:hover a {
+    color: rgba(255, 255, 255, 0.785);
+}
+
+.logo {
+    height: 50px;
+    cursor: pointer;
+}
+
+/*SIDEBAR*/
+.sidebar {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: #00102092;
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.307);
+    flex-direction: column;
+    padding: 20px;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
+}
+.sidebar.active {
+    display: flex;
+    transform: translateX(0);
+    z-index: 9999;
+}
+.sidebar li {
+    width: 100%;
+    padding: 10px 0;
+}
+.sidebar a {
+    width: 100%;
+    color: #ffffff;
+    text-decoration: none;
+}
+.sidebar a:hover {
+    background-color: #ffffff0a;
+    color: #ffffffc3;
+}
+.menu-button {
+    display: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 999;
+}
+.menu-button a {
+    text-decoration: none;
+    color: black;
+}
+.menu-button a:hover {
+    background-color: transparent;
+    color: black;
+    text-decoration: none;
+}
+
+/*CONTENT*/
+.content {
+    position: relative;
+    margin-top: 80px;
+    text-align: center;
+    color: #070707e7;
+}
+
+/*INTERACTIVITY*/
+@media (max-width: 800px) {
+    .hideOnMobile {
+        display: none;
+    }
+}
+    .menu-button {
+        display: block;
+    }
+@media (max-width: 400px) {
+    .menu-button {
+        display: block;
+        color: #fff;
+    }
+}
+
+/*FAQ*/
+.content {
+    max-width: 900px;
+    margin: 100px auto 20px;
+    padding: 20px;
+    text-align: left;
+}
+.content h1 {
+    font-size: 2.5em;
+    color: #001F3F;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    background: linear-gradient(135deg, #ffffff, #a4bcff);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.faq-item {
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+.faq-item h3 {
+    font-size: 1.5em;
+    color: #001F3F;
+    cursor: pointer;
+    margin-bottom: 10px;
+    position: relative;
+}
+.faq-item h3::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ffffff;
+    transition: width 0.3s;
+}
+.faq-item h3:hover::after {
+    width: 100%;
+}
+.faq-item p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin: 10px 0 0;
+    padding: 0;
+    color: #252525;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+.faq-item.active p {
+    max-height: 500px;
+    opacity: 1;
+}
+
+.backgound {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.backgound img {
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.footer1 {
+    position: absolute;
+    bottom: 0; 
+    left: 10px; 
+    color: #1e1e1e; 
+    font-size: 0.9em;
+    padding: 5px 10px;
+    border-radius: 5px;
+    z-index: 10;
+    margin-top: auto;  
+}
+.menu-button {
+    display: none;
+}
+@media (max-width: 800px) {
+    .footer1 {
+        position: relative;  
+        margin-top: auto;
+    }
+}
+@media (max-width: 800px) {
+    .hideOnMobile {
+        display: none;
+    }
+    .menu-button {
+        display: block;
+    }
+}
+@media (max-width: 400px) {
+    .menu-button {
+        display: block;
+        color: #fff;
+    }
+}
+@media (max-width: 800px) {
+    .content h1 {
+        font-size: 2em;
+    }
+    .faq-item h3 {
+        font-size: 1.2em;
+    }
+    .faq-item p {
+        font-size: 1em;
+    }
+}
