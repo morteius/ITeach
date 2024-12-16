@@ -1,0 +1,237 @@
+/*//////////PROPERTY OF C.J MAPE, 2024 ©//////////*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*BODY*/
+body {
+    padding-top: 100px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed; /* Ensures it stays in place */
+    background-image: url(../images/bg/bg-1.jpg);
+    font-family: 'Poppins', sans-serif;
+}
+
+/*NAV BAR*/
+nav {
+    display: flex;
+    font-size: large;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.219);
+    background-color: #ffffffb7;
+    padding: 10px 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    box-sizing: border-box;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+nav li {
+    margin-left: 29px;
+    position: relative;
+}
+nav a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+nav ul:not(.sidebar) li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #000000af;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s ease;
+}
+nav ul:not(.sidebar) li:hover::after {
+    width: 100%;
+}
+nav ul:not(.sidebar) li:hover a {
+    color: rgba(66, 66, 66, 0.892);
+}
+
+/*SIDEBAR*/
+.sidebar {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: #ffffff0e;
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.307);
+    flex-direction: column;
+    padding: 20px;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
+}
+.sidebar.active {
+    display: flex;
+    transform: translateX(0);
+    z-index: 9999;
+}
+.sidebar li {
+    width: 100%;
+    padding: 10px 0;
+}
+.sidebar a {
+    width: 100%;
+    color: #000000;
+    text-decoration: none;
+}
+.sidebar a:hover {
+    background-color: #0000000f;
+    color: #202020f3;
+}
+.menu-button {
+    display: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 999;
+}
+
+/*LOGO*/
+.logo {
+    height: 50px;
+    cursor: pointer;
+}
+
+/*CONTENT*/
+.content {
+    color: rgb(23, 23, 23);
+    font-size: 35px;
+    font-weight: bolder;
+    line-height: 60px;
+    text-align: center;
+    margin-top: 8%;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.205), rgba(0, 0, 0, 0));
+}
+.content h3 {
+    line-height: 50px;
+}
+
+/*BUTTON*/
+button {
+    width: 180px;
+    padding: 18px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #ffffff;
+    background: rgb(23, 23, 23);
+    color: #ffffff;
+    cursor: pointer;
+    border: rgb(23, 23, 23);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+button .background {
+    background: rgb(23, 23, 23);
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.3s ease;
+}
+button:hover .background {
+    width: 100%;
+    background: #e8e8e8;
+}
+button:hover {
+    border: none;
+    background: #333333;
+    color: rgb(23, 23, 23);
+}
+button span {
+    position: relative;
+    z-index: 2;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+button:hover span {
+    color: rgb(23, 23, 23);
+}
+
+/* FOOTER */
+.footer {
+    background-color: #101010;
+    color: white;
+    padding: 5px 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin-top: 80px;
+}
+.footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap:15px;
+    margin-bottom: 5px; 
+}
+.footer .social-icons a svg {
+    width: 30px; 
+    height: 30px;
+    fill: white; 
+    transition: fill 0.3s ease;
+}
+.footer .social-icons a:hover svg {
+    fill:   #176bfb;
+}
+.footer p {
+    font-size: 14px;
+    margin-top: 1px;
+    font-weight: 400;
+}
+
+/*INTERACTIVITY*/
+@media (max-width: 800px) {
+    .content {
+        font-size: 25px;
+        line-height: 40px;
+    }
+    .hideOnMobile {
+        display: none;
+    }
+    .menu-button {
+        display: block;
+    }
+    body {
+        background-size: contain;
+    }
+}
+@media (max-width: 400px) {
+    .content {
+        font-size: 20px;
+        line-height: 35px;
+    }
+    body {
+        background-size: contain;
+        background-position: center;
+    }
+}

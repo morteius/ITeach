@@ -1,0 +1,77 @@
+<!--///////////PROPERTY OF C.J MAPE, 2024 ©///////////-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses | Introduction to Computing</title>
+    <link rel="stylesheet" href="../css/csa.css">
+    <link rel="icon" href="../images/logo/icon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<!--FONT POPPINS-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<!--NAV-->
+<body>
+    <nav>
+        <a href="../index.html">
+            <img src="../images/logo/logo.png" class="logo" alt="Logo">
+        </a>
+        <ul class="sidebar">
+            <li onclick="hideSidebar()"> 
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff">
+                    <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+                </svg></a>
+            </li>
+            <li><a href="../html/courses.html">Courses</a></li>
+            <li><a href="../html/resources.html">Resources</a></li>
+            <li><a href="../html/tools.html">Tools</a></li>
+            <li><a href="../html/about.html">About</a></li>
+            <li><a href="../html/faq.html">FAQ</a></li>
+            <li><a href="../html/log-in.html">Log In</a></li>
+        </ul>
+        <ul>
+            <li class="hideOnMobile"><a href="../html/courses.html">Courses</a></li>
+            <li class="hideOnMobile"><a href="../html/resources.html">Resources</a></li>
+            <li class="hideOnMobile"><a href="../html/tools.html">Tools</a></li>
+            <li class="hideOnMobile"><a href="../html/about.html">About</a></li>
+            <li class="hideOnMobile"><a href="../html/faq.html">FAQ</a></li>
+            <li class="hideOnMobile"><a href="../html/log-in.html">Log In</a></li>
+            <li class="menu-button" onclick="showSidebar()">
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff">
+                    <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+                </svg></a>
+            </li>
+        </ul>
+    </nav>
+<!--FILES-->
+    <div class="cf">
+        <h2>INTRODUCTION TO COMPUTING DOWNLOADABLE FILES:</h2>
+        <ul>
+            <li><a href="../html/courses files/Introduction to Computing/Lessons(Midterms)/The Computing Industry.pdf" download>LESSON 1: THE COMPUTING INDUSTRY</a></li>
+            <li><a href="../html/courses files/Introduction to Computing/Lessons(Midterms)/Computer Systems_ Organization and Structure.pdf" download>LESSON 2: COMPUTER SYSTEMS: ORGANIZATION & STRUCTURE</a></li>
+            <li><a href="../html/courses files/Introduction to Computing/Lessons(Midterms)/Applications of Computing in Different Fields.pdf" download>LESSON 3: APPLICATIONS OF COMPUTING IN DIFFERENT FIELDS</a></li>
+            <li><a href="../html/courses files/Introduction to Computing/Lessons(Midterms)/Applications of Computing in Education.pdf" download>LESSON 4: APPLICATIONS OF COMPUTING IN EDUCATION</a></li>
+            <li><a href="../html/courses files/Introduction to Computing/Lessons(Midterms)/Applications of Computing in Entertainment and Media.pdf" download>LESSON 5: APPLICATIONS OF COMPUTING IN ENTERTAINMENT & MEDIA</a></li>
+            <li><a href="../html/courses files/Introduction to Computing/Lessons(Midterms)/Applications of Computing in Finance and Accounting.pdf" download>LESSON 6: APPLICATIONS OF COMPUTING IN FINANCE & ACCOUNTING</a></li>
+            <li><a href="../html/courses files/Introduction to Computing/Lessons(Midterms)/Applications of Computing in Government and Public Service.pdf" download>LESSON 7: APPLICATIONS OF COMPUTING IN GOVERNMENT & PUBLIC SERVICE</a></li>
+            <li><a href="../html/courses files/Introduction to Computing/Lessons(Midterms)/Applications of Computing in Healthcare.pdf" download>LESSON 8: APPLICATIONS OF COMPUTING IN HEALTHCARE</a></li>
+            <li><a href="../html/courses files/Introduction to Computing/Lessons(Midterms)/Applications of Computing in Manufacturing Industry.pdf" download>LESSON 9: APPLICATIONS OF COMPUTING IN MANUFACTURING INDUSTRY</a></li>
+            <li><a href="../html/courses files/Introduction to Computing/Lessons(Midterms)/Applications of Computing in Research Development.pptx" download>LESSON 10: APPLICATIONS OF COMPUTING IN RESEARCH DEVELOPMENT</a></li>
+            <li><a href="../html/courses files/Introduction to Computing/Lessons(Midterms)/Applications of Computing in Social Media.pdf" download>LESSON 11: APPLICATIONS OF COMPUTING IN SOCIAL MEDIA</a></li>
+            <li><a href="../html/courses files/Introduction to Computing/Lessons(Midterms)/Applications of Computing in Transportation.pdf" download>LESSON 12: APPLICATIONS OF COMPUTING IN TRANSPORTATION</a></li>
+            <li><a href="../html/courses files/Introduction to Computing/Lessons(Midterms)/Applications of Retail and E-Commerce.pdf" download>LESSON 13: APPLICATIONS OF COMPUTING IN E-COMMERCE</a></li>
+        </ul>
+    </div>
+<!--NAV-SCRIPT-->
+    <script>
+        function showSidebar() {
+            document.querySelector('.sidebar').classList.add('active');
+        }
+        function hideSidebar() {
+            document.querySelector('.sidebar').classList.remove('active');
+        }
+    </script>
+</body>
+</html>
