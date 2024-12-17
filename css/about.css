@@ -163,6 +163,7 @@ nav ul:not(.sidebar) li:hover a {
 .content {
     padding: 60px 20px;
     text-align: center;
+    margin: 80px auto;
     margin-top: 80px; 
     color: #070707;
 }
