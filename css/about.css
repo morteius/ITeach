@@ -163,7 +163,6 @@ nav ul:not(.sidebar) li:hover a {
 .content {
     padding: 60px 20px;
     text-align: center;
-    margin: 80px auto;
     margin-top: 80px; 
     color: #070707;
 }
@@ -372,38 +371,6 @@ nav ul:not(.sidebar) li:hover a {
 }
 
 /*RESPONSIVE STYLING*/
-
-/* Styling for large desktops */
-@media (min-width: 1200px) {
-    .content h1 {
-        font-size: 4em;
-    }
-    .content h2 {
-        font-size: 3.5em;
-    }
-    .content p {
-        font-size: 1.5em;
-        margin: 20px;
-        padding: 20px;
-    }
-}
-
-/* Styling for large tablets and small desktops */
-@media (max-width: 1024px) {
-    .content h1 {
-        font-size: 3em;
-    }
-    .content h2 {
-        font-size: 2.5em;
-    }
-    .content p {
-        font-size: 1.2em;
-        margin: 15px;
-        padding: 15px;
-    }
-}
-
-/* Styling for smartphones in landscape and small tablets */
 @media (max-width: 800px) {
     .content h1 {
         font-size: 2.5em;
@@ -413,13 +380,14 @@ nav ul:not(.sidebar) li:hover a {
     }
     .content p {
         font-size: 1.1em;
-        margin: 10px;
-        padding: 15px;
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 }
 
-/* Styling for smaller smartphones */
-@media (max-width: 480px) {
+@media (max-width: 400px) {
     .content h1 {
         font-size: 2.2em;
     }
@@ -428,22 +396,9 @@ nav ul:not(.sidebar) li:hover a {
     }
     .content p {
         font-size: 1em;
-        margin: 5px;
-        padding: 10px;
-    }
-}
-
-/* Styling for extra-small screens (below 360px) */
-@media (max-width: 360px) {
-    .content h1 {
-        font-size: 2em;
-    }
-    .content h2 {
-        font-size: 1.6em;
-    }
-    .content p {
-        font-size: 0.9em;
-        margin: 5px;
-        padding: 5px;
+        margin-left: 5px;
+        margin-right: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }
