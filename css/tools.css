@@ -1,4 +1,4 @@
-/*//////////PROPERTY OF C.J MAPE, 2024 ©//////////*/
+o/*//////////PROPERTY OF C.J MAPE, 2024 ©//////////*/
 
 * {
     margin: 0;
@@ -222,7 +222,6 @@ button:hover span {
         display: block;
     }
     body {
-        background-size: contain;
     }
 }
 @media (max-width: 400px) {
@@ -231,7 +230,6 @@ button:hover span {
         line-height: 35px;
     }
     body {
-        background-size: contain;
         background-position: center;
     }
 }
