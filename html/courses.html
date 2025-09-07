@@ -49,13 +49,17 @@
     </nav>
 
 <!--COURSES-->
-    <section class="courses-grid">
+    <div class="course-boxes">
+
+        <!--PHYSICS FOR COMPUTING-->
         <div class="course-box" id="course1">
             <a href="physics.html">
-                <img src="../images/courses/c1.png" alt="Course 1">
-                <h3>PHYSICS FOR COMPUTING</h3>
+                <div class="course-img">
+                    <img src="../images/courses/c1.png" alt="Physcis for Computing">
+                </div>
             </a>
             <div class="dropdown-content">
+                <h3>PHYSICS FOR COMPUTING</h3>
                 <p class="short-desc">
                     This course teaches students the physical fundamentals behind computer hardware and technology design.
                     <button class="dropdown-btn">
@@ -67,8 +71,7 @@
                         </svg>
                     </button>
                 </p>
-               
-                 <p class="full-desc" style="display:none;"> 
+                <p class="full-desc"> 
                     It explores key concepts such as transistor technology, electronic components, free electron theories in solids, 
                     semiconductors and their devices, basic logic circuits, and integrated circuits. The course emphasizes how physics, 
                     mathematics, and logic have contributed to the creation of powerful computing machines, enabling students to appreciate 
@@ -77,180 +80,193 @@
                 </p>
             </div>
         </div>
+
+        <!-- INTRODUCTION TO COMPUTING -->
         <div class="course-box" id="course2">
-            <a href="computing.html">
-                <img src="../images/courses/c2.jpg" alt="Course 2">
-                <h3>INTRODUCTION TO COMPUTING</h3>
-            </a>
-            <div class="dropdown-content">
-                <p class="short-desc">
-                    This course covers computing's history, key contributors, and transformative events that shaped modern society. 
-                    <button class="dropdown-btn">
-                        <svg class="arrow-down" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000">
-                            <path d="M480-360 280-560h400L480-360Z"/>
-                        </svg>
-                        <svg class="arrow-up" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000" style="display:none;">
-                            <path d="m280-400 200-200 200 200H280Z"/>
-                        </svg>
-                    </button>
-                </p>
-                <p class="full-desc" style="display:none;">
-                    It examines the computing industry and the role of influential organizations that 
-                    set standards and drive innovation. Students explore computing applications across 
-                    diverse fields, understanding its impact on daily life and global systems. The course 
-                    delves into the fundamentals of computer systems, including hardware, architecture, and 
-                    foundational concepts like number systems. Additionally, it introduces the internet and 
-                    the World Wide Web, exploring their mechanisms and historical context.
+          <a href="computing.html">
+            <div class="course-img">
+              <img src="../images/courses/c2.jpg" alt="Introduction to Computing">
             </div>
+          </a>
+          <div class="dropdown-content">
+            <h3>INTRODUCTION TO COMPUTING</h3>
+            <p class="short-desc">
+              This course covers computing's history, key contributors, and transformative events that shaped modern society.
+              <button class="dropdown-btn">
+                <svg class="arrow-down" xmlns="http://www.w3.org/2000/svg" height="24px"
+                  viewBox="0 -960 960 960" width="24px" fill="#000">
+                  <path d="M480-360 280-560h400L480-360Z" />
+                </svg>
+                <svg class="arrow-up" xmlns="http://www.w3.org/2000/svg" height="24px"
+                  viewBox="0 -960 960 960" width="24px" fill="#000" style="display:none;">
+                  <path d="m280-400 200-200 200 200H280Z" />
+                </svg>
+              </button>
+            </p>
+            <p class="full-desc" id="desc2">
+              It examines the computing industry and the role of influential organizations that set standards and drive innovation.
+              Students explore computing applications across diverse fields, understanding its impact on daily life and global systems.
+              The course delves into the fundamentals of computer systems, including hardware, architecture, and foundational concepts like number systems.
+              Additionally, it introduces the internet and the World Wide Web, exploring their mechanisms and historical context.
+            </p>
+          </div>
         </div>
+
+        <!-- COMPUTER PROGRAMMING -->
         <div class="course-box" id="course3">
-            <a href="comprog.html">
-                <img src="../images/courses/c3.png" alt="Course 3">
-                <h3>COMPUTER PROGRAMMING</h3>
-            </a>
-            <div class="dropdown-content">
-                <p class="short-desc">
-                    This course introduces to the fundamentals of programming using the C programming language. 
-                    <button class="dropdown-btn">
-                        <svg class="arrow-down" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000">
-                            <path d="M480-360 280-560h400L480-360Z"/>
-                        </svg>
-                        <svg class="arrow-up" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000" style="display:none;">
-                            <path d="m280-400 200-200 200 200H280Z"/>
-                        </svg>
-                    </button>
-                </p>
-                <p class="full-desc" style="display:none;">
-                    The course focuses on building a strong foundation by exploring basic programming concepts, including program structure, 
-                    syntax, variables, data types, operators, and control flow mechanisms. 
-                    It provides hands-on experience with programming environments, debugging, and problem-solving through structured programming 
-                    approaches. Students learn essential C programming constructs such 
-                    as decision-making, loops, arrays, strings, pointers, and memory management while emphasizing proper coding practices, 
-                    logical reasoning, and coding discipline.
-                </p>
+          <a href="comprog.html">
+            <div class="course-img">
+              <img src="../images/courses/c3.png" alt="Computer Programming">
             </div>
+          </a>
+          <div class="dropdown-content">
+            <h3>COMPUTER PROGRAMMING</h3>
+            <p class="short-desc">
+              This course introduces the fundamentals of programming using the C programming language.
+              <button class="dropdown-btn">
+                <svg class="arrow-down" xmlns="http://www.w3.org/2000/svg" height="24px"
+                  viewBox="0 -960 960 960" width="24px" fill="#000">
+                  <path d="M480-360 280-560h400L480-360Z" />
+                </svg>
+                <svg class="arrow-up" xmlns="http://www.w3.org/2000/svg" height="24px"
+                  viewBox="0 -960 960 960" width="24px" fill="#000" style="display:none;">
+                  <path d="m280-400 200-200 200 200H280Z" />
+                </svg>
+              </button>
+            </p>
+            <p class="full-desc">
+              The course focuses on building a strong foundation by exploring basic programming concepts, including program structure,
+              syntax, variables, data types, operators, and control flow mechanisms. 
+              It provides hands-on experience with programming environments, debugging, and problem-solving through structured programming approaches. 
+              Students learn essential C programming constructs such as decision-making, loops, arrays, strings, pointers, and memory management while emphasizing proper coding practices,
+              logical reasoning, and coding discipline.
+            </p>
+          </div>
         </div>
+
+        <!-- MATHEMATICS IN THE MODERN WORLD -->
         <div class="course-box" id="course4">
-            <a href="mmw.html">
-                <img src="../images/courses/c4.jpg" alt="Course 4">
-                <h3>MATHEMATICS IN THE MODERN WORLD</h3>
-            </a>
-            <div class="dropdown-content">
-                <p class="short-desc">
-                    This course explores the nature of mathematics, highlighting its practical, intellectual, and aesthetic dimensions. 
-                    <button class="dropdown-btn">
-                        <svg class="arrow-down" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000">
-                            <path d="M480-360 280-560h400L480-360Z"/>
-                        </svg>
-                        <svg class="arrow-up" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000" style="display:none;">
-                            <path d="m280-400 200-200 200 200H280Z"/>
-                        </svg>
-                    </button>
-                </p>
-                <p class="full-desc" style="display:none;">
-                    It introduces mathematics as an exploration of patterns in nature and an application of inductive and deductive reasoning, 
-                    encouraging appreciation beyond formulas to its logic, reasoning, and beauty. 
-                    The course emphasizes mathematics as a tool for managing personal finances, making social choices, understanding geometric designs, 
-                    securing data, and fairly dividing resources. Through diverse exercises, students engage with mathematics as a way of knowing and apply 
-                    it to real-life scenarios, enhancing their understanding and skills.
-                </p>
+          <a href="mmw.html">
+            <div class="course-img">
+              <img src="../images/courses/c4.jpg" alt="Mathematics in the Modern World">
             </div>
+          </a>
+          <div class="dropdown-content">
+            <h3>MATHEMATICS IN THE MODERN WORLD</h3>
+            <p class="short-desc">
+              This course explores the nature of mathematics, highlighting its practical, intellectual, and aesthetic dimensions.
+              <button class="dropdown-btn">
+                <svg class="arrow-down" xmlns="http://www.w3.org/2000/svg" height="24px"
+                  viewBox="0 -960 960 960" width="24px" fill="#000">
+                  <path d="M480-360 280-560h400L480-360Z" />
+                </svg>
+                <svg class="arrow-up" xmlns="http://www.w3.org/2000/svg" height="24px"
+                  viewBox="0 -960 960 960" width="24px" fill="#000" style="display:none;">
+                  <path d="m280-400 200-200 200 200H280Z" />
+                </svg>
+              </button>
+            </p>
+            <p class="full-desc">
+              It introduces mathematics as an exploration of patterns in nature and an application of inductive and deductive reasoning,
+              encouraging appreciation beyond formulas to its logic, reasoning, and beauty.
+              The course emphasizes mathematics as a tool for managing personal finances, making social choices, understanding geometric designs,
+              securing data, and fairly dividing resources. Through diverse exercises, students engage with mathematics as a way of knowing and apply
+              it to real-life scenarios, enhancing their understanding and skills.
+            </p>
+          </div>
         </div>
+
+        <!-- HUMAN REPRODUCTION -->
         <div class="course-box" id="course5">
-            <a href="humanrep.html">
-                <img src="../images/courses/c5.png" alt="Course 5">
-                <h3>HUMAN REPRODUCTION</h3>
-            </a>
-            <div class="dropdown-content">
-                <p class="short-desc">
-                    This lecture course examines the biological, cultural, and ecological aspects of human reproduction.
-                    <button class="dropdown-btn">
-                        <svg class="arrow-down" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000">
-                            <path d="M480-360 280-560h400L480-360Z"/>
-                        </svg>
-                        <svg class="arrow-up" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000" style="display:none;">
-                            <path d="m280-400 200-200 200 200H280Z"/>
-                        </svg>
-                    </button>
-                </p>
-                <p class="full-desc" style="display:none;">
-                    It covers reproductive anatomy and physiology, stages of development, reproductive health, and the impact of environmental and societal factors. 
-                    The course delves into contemporary issues in reproductive biotechnology, ethical considerations, and common misconceptions, fostering a deeper 
-                    understanding of human reproduction. 
-                    Through lectures, student-led discussions, and research analysis, students gain insights into reproductive health, challenges, and advancements 
-                    while emphasizing informed decision-making and care practices.
-                </p>
+          <a href="humanrep.html">
+            <div class="course-img">
+              <img src="../images/courses/c5.png" alt="Human Reproduction">
             </div>
+          </a>
+          <div class="dropdown-content">
+            <h3>HUMAN REPRODUCTION</h3>
+            <p class="short-desc">
+              This lecture course examines the biological, cultural, and ecological aspects of human reproduction.
+              <button class="dropdown-btn">
+                <svg class="arrow-down" xmlns="http://www.w3.org/2000/svg" height="24px"
+                  viewBox="0 -960 960 960" width="24px" fill="#000">
+                  <path d="M480-360 280-560h400L480-360Z" />
+                </svg>
+                <svg class="arrow-up" xmlns="http://www.w3.org/2000/svg" height="24px"
+                  viewBox="0 -960 960 960" width="24px" fill="#000" style="display:none;">
+                  <path d="m280-400 200-200 200 200H280Z" />
+                </svg>
+              </button>
+            </p>
+            <p class="full-desc">
+              It covers reproductive anatomy and physiology, stages of development, reproductive health, and the impact of environmental and societal factors.
+              The course delves into contemporary issues in reproductive biotechnology, ethical considerations, and common misconceptions, fostering a deeper
+              understanding of human reproduction. 
+              Through lectures, student-led discussions, and research analysis, students gain insights into reproductive health, challenges, and advancements
+              while emphasizing informed decision-making and care practices.
+            </p>
+          </div>
         </div>
+
+        <!-- NATIONAL SERVICE TRAINING PROGRAM -->
         <div class="course-box" id="course6">
-            <a href="nstp.html">
-                <img src="../images/courses/c6.png" alt="Course 6">
-                <h3>NATIONAL SERVICE TRAINING PROGRAM (NSTP)</h3>
-            </a>
-            <div class="dropdown-content">
-                <p class="short-desc">
-                    The National Service Training Program (NSTP) in the Philippines is a program aimed at enhancing the civic consciousness and defense preparedness of the youth.
-                    <button class="dropdown-btn">
-                        <svg class="arrow-down" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000">
-                            <path d="M480-360 280-560h400L480-360Z"/>
-                        </svg>
-                        <svg class="arrow-up" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000" style="display:none;">
-                            <path d="m280-400 200-200 200 200H280Z"/>
-                        </svg>
-                    </button>
-                </p>
-                <p class="full-desc" style="display:none;">
-                    NSTP is divided into three components: the Reserve Officers' Training Corps (ROTC), 
-                    the Civic Welfare Training Service (CWTS), and the Literacy Training Service (LTS). 
-                    ROTC is focused on military training and discipline, aiming to prepare students for 
-                    national defense duties. The CWTS component focuses on community development and social 
-                    responsibility, engaging students in programs such as environmental protection, health 
-                    awareness, and disaster preparedness. Meanwhile, LTS centers on teaching and empowering 
-                    students to help educate out-of-school youth and adults, particularly in basic literacy 
-                    and skills development.
-                </p>
+          <a href="nstp.html">
+            <div class="course-img">
+              <img src="../images/courses/c6.png" alt="NSTP">
             </div>
+          </a>
+          <div class="dropdown-content">
+            <h3>NATIONAL SERVICE TRAINING PROGRAM (NSTP)</h3>
+            <p class="short-desc">
+              The National Service Training Program (NSTP) in the Philippines is a program aimed at enhancing the civic consciousness and defense preparedness of the youth.
+              <button class="dropdown-btn">
+                <svg class="arrow-down" xmlns="http://www.w3.org/2000/svg" height="24px"
+                  viewBox="0 -960 960 960" width="24px" fill="#000">
+                  <path d="M480-360 280-560h400L480-360Z" />
+                </svg>
+                <svg class="arrow-up" xmlns="http://www.w3.org/2000/svg" height="24px"
+                  viewBox="0 -960 960 960" width="24px" fill="#000" style="display:none;">
+                  <path d="m280-400 200-200 200 200H280Z" />
+                </svg>
+              </button>
+            </p>
+            <p class="full-desc">
+              NSTP is divided into three components: the Reserve Officers' Training Corps (ROTC),
+              the Civic Welfare Training Service (CWTS), and the Literacy Training Service (LTS).
+              ROTC is focused on military training and discipline, aiming to prepare students for national defense duties.
+              The CWTS component focuses on community development and social responsibility, engaging students in programs such as environmental protection,
+              health awareness, and disaster preparedness. Meanwhile, LTS centers on teaching and empowering students to help educate out-of-school youth
+              and adults, particularly in basic literacy and skills development.
+            </p>
+          </div>
         </div>
-    </section>
+    </div>
 
-<!--COURSES-SCRIPT-->
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            document.querySelectorAll(".course-box").forEach((box) => {
-                const dropdownBtn = box.querySelector(".dropdown-btn");
-                const fullDesc = box.querySelector(".full-desc");
-                const arrowDown = box.querySelector(".arrow-down");
-                const arrowUp = box.querySelector(".arrow-up");
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".course-box").forEach((box) => {
+    const btn = box.querySelector(".dropdown-btn");
+    const desc = box.querySelector(".full-desc");
+    const arrowDown = box.querySelector(".arrow-down");
+    const arrowUp = box.querySelector(".arrow-up");
 
-                dropdownBtn.addEventListener("click", () => {
-                    const isExpanded = fullDesc.style.display === "block";
+    btn.addEventListener("click", () => {
+      const isActive = desc.classList.contains("active");
 
-                    // Close all dropdowns first
-                    document.querySelectorAll(".full-desc").forEach((desc) => {
-                        if (desc !== fullDesc) {
-                            desc.style.display = "none";
-                            const otherArrowDown = desc.previousElementSibling.querySelector(".arrow-down");
-                            const otherArrowUp = desc.previousElementSibling.querySelector(".arrow-up");
-                            otherArrowDown.style.display = "inline";
-                            otherArrowUp.style.display = "none";
-                        }
-                    });
+      if (isActive) {
+        desc.classList.remove("active");
+        arrowDown.style.display = "inline";
+        arrowUp.style.display = "none";
+      } else {
+        desc.classList.add("active");
+        arrowDown.style.display = "none";
+        arrowUp.style.display = "inline";
+      }
+    });
+  });
+});
+</script>
 
-                    // Toggle the clicked course box
-                    if (isExpanded) {
-                        fullDesc.style.display = "none";
-                        arrowDown.style.display = "inline";
-                        arrowUp.style.display = "none";
-                    } else {
-                        fullDesc.style.display = "block";
-                        arrowDown.style.display = "none";
-                        arrowUp.style.display = "inline";
-                    }
-                });
-            });
-        });
-    </script>
-    
 <!--SIDEBAR SCRIPT-->
     <script>
         function showSidebar() {
