@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light only">
+    <meta name="theme-color" content="#001F3F" media="(prefers-color-scheme: light)">
+    <title>Resources | ITeach</title>
+    <link rel="stylesheet" href="../css/resources.css">
+    <link rel="icon" href="../images/logo/icon.png" type="image/x-icon">
+    
+    <!-- FONT POPPINS -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- NAV BAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo-link">
+                <img src="../images/logo/logo.png" alt="ITeach Logo">
+            </a>
+            
+            <ul class="sidebar">
+                <li class="close-btn" onclick="hideSidebar()"> 
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px" fill="#fff">
+                            <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+                        </svg>
+                    </a>
+                </li>
+                <li><a href="../html/courses.html"><i class="fas fa-book"></i> Courses</a></li>
+                <li><a href="../html/resources.html"><i class="fas fa-folder-open"></i> Resources</a></li>
+                <li><a href="../html/tools.html"><i class="fas fa-tools"></i> Tools</a></li>
+                <li><a href="../html/about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="../html/faq.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                <li><a href="../html/log-in.html"><i class="fas fa-sign-in-alt"></i> Log In</a></li>
+            </ul>
+            
+            <ul class="nav-links">
+                <li><a href="../html/courses.html">Courses</a></li>
+                <li><a href="../html/resources.html">Resources</a></li>
+                <li><a href="../html/tools.html">Tools</a></li>
+                <li><a href="../html/about.html">About</a></li>
+                <li><a href="../html/faq.html">FAQ</a></li>
+                <li><a href="../html/log-in.html" class="login-btn">Log In</a></li>
+            </ul>
+            
+            <div class="menu-button" onclick="showSidebar()">
+                <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#fff">
+                    <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+                </svg>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+        <div class="header-content">
+            <h1 class="page-title">Learning Resources</h1>
+            <p class="page-subtitle">Explore curated YouTube tutorials and educational videos for each IT course</p>
+        </div>
+    </section>
+
+    <!-- RESOURCES SECTION -->
+    <section class="resources-section">
+        <!-- PHYSICS FOR COMPUTING -->
+        <div class="carousel-wrapper">
+            <h2 class="carousel-title">Physics for Computing</h2>
+            <div class="carousel-container">
+                <button class="carousel-arrow left">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                        <path d="M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z"/>
+                    </svg>
+                </button>
+                
+                <div class="carousel-track">
+                    <!-- Video 1 -->
+                    <div class="youtube-box" data-video-id="qO6AuFc72AA">
+                        <a href="https://youtu.be/qO6AuFc72AA" target="_blank">
+                            <div class="video-thumbnail">
+                                <img src="https://img.youtube.com/vi/qO6AuFc72AA/maxresdefault.jpg" alt="Heat">
+                                <div class="play-overlay">
+                                    <div class="play-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <path d="M8 5v14l11-7z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="video-info">
+                                <h3>Understanding Heat Transfer in Computing</h3>
+                                <div class="video-meta">
+                                    <span class="channel-name">Physics Explained</span>
+                                    <span>•</span>
+                                    <span>15 min</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Video 2 -->
+                    <div class="youtube-box" data-video-id="X4EUwTwZ110">
+                        <a href="https://youtu.be/X4EUwTwZ110" target="_blank">
+                            <div class="video-thumbnail">
+                                <img src="https://img.youtube.com/vi/X4EUwTwZ110/maxresdefault.jpg" alt="Electricity">
+                                <div class="play-overlay">
+                                    <div class="play-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <path d="M8 5v14l11-7z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="video-info">
+                                <h3>Electricity Fundamentals for IT Students</h3>
+                                <div class="video-meta">
+                                    <span class="channel-name">Tech Physics</span>
+                                    <span>•</span>
+                                    <span>22 min</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Video 3 -->
+                    <div class="youtube-box" data-video-id="HJMQH2tNUrA">
+                        <a href="https://youtu.be/HJMQH2tNUrA" target="_blank">
+                            <div class="video-thumbnail">
+                                <img src="https://img.youtube.com/vi/HJMQH2tNUrA/maxresdefault.jpg" alt="Vacuum Tubes">
+                                <div class="play-overlay">
+                                    <div class="play-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <path d="M8 5v14l11-7z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="video-info">
+                                <h3>Vacuum Tubes: History to Transistors</h3>
+                                <div class="video-meta">
+                                    <span class="channel-name">Computing History</span>
+                                    <span>•</span>
+                                    <span>18 min</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Video 4 - Added for better carousel -->
+                    <div class="youtube-box" data-video-id="om3C2rOEPzE">
+                        <a href="https://youtu.be/om3C2rOEPzE" target="_blank">
+                            <div class="video-thumbnail">
+                                <img src="https://img.youtube.com/vi/om3C2rOEPzE/maxresdefault.jpg" alt="Semiconductors">
+                                <div class="play-overlay">
+                                    <div class="play-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <path d="M8 5v14l11-7z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="video-info">
+                                <h3>Semiconductor Physics Made Simple</h3>
+                                <div class="video-meta">
+                                    <span class="channel-name">Electronics 101</span>
+                                    <span>•</span>
+                                    <span>25 min</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <button class="carousel-arrow right">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- MATHEMATICS IN THE MODERN WORLD -->
+        <div class="carousel-wrapper">
+            <h2 class="carousel-title">Mathematics in the Modern World</h2>
+            <div class="carousel-container">
+                <button class="carousel-arrow left">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                        <path d="M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z"/>
+                    </svg>
+                </button>
+                
+                <div class="carousel-track">
+                    <!-- Video 1 -->
+                    <div class="youtube-box" data-video-id="kkGeOWYOFoA">
+                        <a href="https://youtu.be/kkGeOWYOFoA" target="_blank">
+                            <div class="video-thumbnail">
+                                <img src="https://img.youtube.com/vi/kkGeOWYOFoA/maxresdefault.jpg" alt="Mathematics in Nature">
+                                <div class="play-overlay">
+                                    <div class="play-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <path d="M8 5v14l11-7z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="video-info">
+                                <h3>Mathematics in Nature and Art</h3>
+                                <div class="video-meta">
+                                    <span class="channel-name">Math Visualized</span>
+                                    <span>•</span>
+                                    <span>20 min</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Video 2 -->
+                    <div class="youtube-box" data-video-id="B1HEzNTGeZ4">
+                        <a href="https://youtu.be/B1HEzNTGeZ4" target="_blank">
+                            <div class="video-thumbnail">
+                                <img src="https://img.youtube.com/vi/B1HEzNTGeZ4/maxresdefault.jpg" alt="Central Tendency">
+                                <div class="play-overlay">
+                                    <div class="play-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <path d="M8 5v14l11-7z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="video-info">
+                                <h3>Measures of Central Tendency Explained</h3>
+                                <div class="video-meta">
+                                    <span class="channel-name">Stats Made Simple</span>
+                                    <span>•</span>
+                                    <span>16 min</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Video 3 -->
+                    <div class="youtube-box" data-video-id="UzyZLV_rPcY">
+                        <a href="https://youtu.be/UzyZLV_rPcY" target="_blank">
+                            <div class="video-thumbnail">
+                                <img src="https://img.youtube.com/vi/UzyZLV_rPcY/maxresdefault.jpg" alt="Relative Position">
+                                <div class="play-overlay">
+                                    <div class="play-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <path d="M8 5v14l11-7z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="video-info">
+                                <h3>Understanding Relative Position in Data</h3>
+                                <div class="video-meta">
+                                    <span class="channel-name">Data Analysis</span>
+                                    <span>•</span>
+                                    <span>14 min</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Video 4 -->
+                    <div class="youtube-box" data-video-id="fNaIOcCqUjY">
+                        <a href="https://youtu.be/fNaIOcCqUjY" target="_blank">
+                            <div class="video-thumbnail">
+                                <img src="https://img.youtube.com/vi/fNaIOcCqUjY/maxresdefault.jpg" alt="Probability Basics">
+                                <div class="play-overlay">
+                                    <div class="play-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <path d="M8 5v14l11-7z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="video-info">
+                                <h3>Probability for Real World Applications</h3>
+                                <div class="video-meta">
+                                    <span class="channel-name">Practical Math</span>
+                                    <span>•</span>
+                                    <span>19 min</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <button class="carousel-arrow right">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- COURSE CATEGORIES -->
+        <div class="course-categories">
+            <div class="category-card">
+                <div class="category-header">
+                    <div class="category-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Computer Programming</h3>
+                </div>
+                <p>Master programming fundamentals with C language tutorials, from basic syntax to advanced concepts.</p>
+                <span class="video-count">12 Videos Available</span>
+            </div>
+
+            <div class="category-card">
+                <div class="category-header">
+                    <div class="category-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Introduction to Computing</h3>
+                </div>
+                <p>Explore computing history, hardware basics, and the evolution of technology through visual learning.</p>
+                <span class="video-count">8 Videos Available</span>
+            </div>
+
+            <div class="category-card">
+                <div class="category-header">
+                    <div class="category-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Human Reproduction</h3>
+                </div>
+                <p>Educational resources for human reproduction studies with expert explanations.</p>
+                <span class="video-count">6 Videos Available</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="../images/logo/logo.png" alt="ITeach Logo" class="footer-logo-img">
+                <p>Empowering IT students with free resources since 2024.</p>
+            </div>
+            
+            <div class="footer-social">
+                <h4>Connect With Us</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/charlesjames.mape" class="social-icon" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/morteius/" class="social-icon" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://twitter.com" class="social-icon" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://youtube.com" class="social-icon" target="_blank">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../html/courses.html">Courses</a></li>
+                    <li><a href="../html/resources.html">Resources</a></li>
+                    <li><a href="../html/tools.html">Tools</a></li>
+                    <li><a href="../html/about.html">About Us</a></li>
+                    <li><a href="../html/faq.html">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; <script>document.write(new Date().getFullYear())</script> ITeach. All Rights Reserved. | Designed for IT Students</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script>
+        // Sidebar functions
+        function showSidebar() {
+            document.querySelector('.sidebar').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function hideSidebar() {
+            document.querySelector('.sidebar').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+        
+        // Close sidebar when clicking outside
+        document.addEventListener('click', function(event) {
+            const sidebar = document.querySelector('.sidebar');
+            const menuButton = document.querySelector('.menu-button');
+            
+            if (sidebar.classList.contains('active') && 
+                !sidebar.contains(event.target) && 
+                !menuButton.contains(event.target)) {
+                hideSidebar();
+            }
+        });
+        
+        // Carousel functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize all carousels
+            document.querySelectorAll('.carousel-container').forEach(carousel => {
+                const track = carousel.querySelector('.carousel-track');
+                const leftArrow = carousel.querySelector('.carousel-arrow.left');
+                const rightArrow = carousel.querySelector('.carousel-arrow.right');
+                const videoBoxes = carousel.querySelectorAll('.youtube-box');
+                
+                // Set scroll amount based on video box width
+                const scrollAmount = videoBoxes[0].offsetWidth + 24; // width + gap
+                
+                // Left arrow click
+                if (leftArrow) {
+                    leftArrow.addEventListener('click', () => {
+                        track.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+                    });
+                }
+                
+                // Right arrow click
+                if (rightArrow) {
+                    rightArrow.addEventListener('click', () => {
+                        track.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+                    });
+                }
+                
+                // Touch/swipe support for mobile
+                let startX;
+                let scrollLeft;
+                
+                track.addEventListener('touchstart', (e) => {
+                    startX = e.touches[0].pageX - track.offsetLeft;
+                    scrollLeft = track.scrollLeft;
+                });
+                
+                track.addEventListener('touchmove', (e) => {
+                    if (!startX) return;
+                    const x = e.touches[0].pageX - track.offsetLeft;
+                    const walk = (x - startX) * 2;
+                    track.scrollLeft = scrollLeft - walk;
+                });
+                
+                // Keyboard navigation
+                track.addEventListener('keydown', (e) => {
+                    if (e.key === 'ArrowLeft') {
+                        track.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+                    } else if (e.key === 'ArrowRight') {
+                        track.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+                    }
+                });
+                
+                // Hover preview for videos (optional)
+                videoBoxes.forEach(box => {
+                    box.addEventListener('mouseenter', () => {
+                        // Add hover effect class
+                        box.classList.add('hover-active');
+                    });
+                    
+                    box.addEventListener('mouseleave', () => {
+                        // Remove hover effect class
+                        box.classList.remove('hover-active');
+                    });
+                });
+            });
+            
+            // Mobile navbar scroll effect
+            const navbar = document.querySelector('.navbar');
+            if (window.innerWidth <= 768) {
+                window.addEventListener('scroll', function() {
+                    if (window.scrollY > 50) {
+                        navbar.classList.add('scrolled');
+                    } else {
+                        navbar.classList.remove('scrolled');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

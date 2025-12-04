@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light only">
+    <title>Log In | ITeach</title>
+    <link rel="stylesheet" href="../css/log-in.css">
+    <link rel="icon" href="../images/logo/icon.png" type="image/x-icon">
+    
+    <!-- FONT POPPINS -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- NAV BAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo-link">
+                <img src="../images/logo/logo.png" alt="ITeach Logo">
+            </a>
+            
+            <ul class="sidebar">
+                <li class="close-btn" onclick="hideSidebar()"> 
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px" fill="#fff">
+                            <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+                        </svg>
+                    </a>
+                </li>
+                <li><a href="../html/courses.html"><i class="fas fa-book"></i> Courses</a></li>
+                <li><a href="../html/resources.html"><i class="fas fa-folder-open"></i> Resources</a></li>
+                <li><a href="../html/tools.html"><i class="fas fa-tools"></i> Tools</a></li>
+                <li><a href="../html/about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="../html/faq.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                <li><a href="../html/log-in.html" class="login-btn">Log In</a></li>
+            </ul>
+            
+            <ul class="nav-links">
+                <li><a href="../html/courses.html">Courses</a></li>
+                <li><a href="../html/resources.html">Resources</a></li>
+                <li><a href="../html/tools.html">Tools</a></li>
+                <li><a href="../html/about.html">About</a></li>
+                <li><a href="../html/faq.html">FAQ</a></li>
+                <li><a href="../html/log-in.html" class="login-btn">Log In</a></li>
+            </ul>
+            
+            <div class="menu-button" onclick="showSidebar()">
+                <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#fff">
+                    <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+                </svg>
+            </div>
+        </div>
+    </nav>
+
+    <!-- LOGIN SECTION -->
+    <section class="login-section">
+        <div class="login-container">
+            <div class="login-header">
+                <h2>Welcome Back</h2>
+                <p>Sign in to access your ITeach account</p>
+            </div>
+            
+            <form class="login-form" id="login-form">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" class="form-input" placeholder="Enter your email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="password" class="form-input" placeholder="Enter your password" required>
+                        <button type="button" class="toggle-password" id="toggle-password">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="remember-forgot">
+                    <div class="remember-me">
+                        <input type="checkbox" id="remember">
+                        <label for="remember">Remember me</label>
+                    </div>
+                    <a href="#" class="forgot-password">Forgot password?</a>
+                </div>
+                
+                <button type="submit" class="submit-btn">Log In</button>
+                
+                <div class="login-divider">
+                    <span>Or continue with</span>
+                </div>
+                
+                <div class="social-login">
+                    <button type="button" class="social-btn google">
+                        <i class="fab fa-google"></i>
+                        <span>Continue with Google</span>
+                    </button>
+                    
+                    <button type="button" class="social-btn github">
+                        <i class="fab fa-github"></i>
+                        <span>Continue with GitHub</span>
+                    </button>
+                    
+                    <button type="button" class="social-btn facebook">
+                        <i class="fab fa-facebook-f"></i>
+                        <span>Continue with Facebook</span>
+                    </button>
+                </div>
+                
+                <div class="signup-link">
+                    <p>Don't have an account? <a href="#">Sign up now</a></p>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="../images/logo/logo.png" alt="ITeach Logo" class="footer-logo-img">
+                <p>Empowering IT students with free resources since 2024.</p>
+            </div>
+            
+            <div class="footer-social">
+                <h4>Connect With Us</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/charlesjames.mape" class="social-icon" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/morteius/" class="social-icon" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://twitter.com" class="social-icon" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://youtube.com" class="social-icon" target="_blank">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../html/courses.html">Courses</a></li>
+                    <li><a href="../html/resources.html">Resources</a></li>
+                    <li><a href="../html/tools.html">Tools</a></li>
+                    <li><a href="../html/about.html">About Us</a></li>
+                    <li><a href="../html/faq.html">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; <script>document.write(new Date().getFullYear())</script> ITeach. All Rights Reserved. | Designed for IT Students</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script>
+        // Sidebar functions
+        function showSidebar() {
+            document.querySelector('.sidebar').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function hideSidebar() {
+            document.querySelector('.sidebar').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+        
+        // Close sidebar when clicking outside
+        document.addEventListener('click', function(event) {
+            const sidebar = document.querySelector('.sidebar');
+            const menuButton = document.querySelector('.menu-button');
+            
+            if (sidebar.classList.contains('active') && 
+                !sidebar.contains(event.target) && 
+                !menuButton.contains(event.target)) {
+                hideSidebar();
+            }
+        });
+        
+        // Mobile navbar scroll effect
+        const navbar = document.querySelector('.navbar');
+        if (window.innerWidth <= 768) {
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+        }
+        
+        // Password toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const togglePassword = document.getElementById('toggle-password');
+            const passwordInput = document.getElementById('password');
+            
+            if (togglePassword && passwordInput) {
+                togglePassword.addEventListener('click', function() {
+                    const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                    passwordInput.setAttribute('type', type);
+                    
+                    // Toggle eye icon
+                    const icon = this.querySelector('i');
+                    if (type === 'text') {
+                        icon.classList.remove('fa-eye');
+                        icon.classList.add('fa-eye-slash');
+                    } else {
+                        icon.classList.remove('fa-eye-slash');
+                        icon.classList.add('fa-eye');
+                    }
+                });
+            }
+            
+            // Form submission
+            const loginForm = document.getElementById('login-form');
+            if (loginForm) {
+                loginForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const email = document.getElementById('email').value;
+                    const password = document.getElementById('password').value;
+                    
+                    if (email && password) {
+                        // In a real app, this would be sent to a server
+                        alert('Login successful! Welcome back to ITeach.');
+                        // You could redirect to dashboard here:
+                        // window.location.href = 'dashboard.html';
+                    } else {
+                        alert('Please enter both email and password');
+                    }
+                });
+            }
+            
+            // Social login buttons
+            document.querySelectorAll('.social-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const provider = this.querySelector('span').textContent.replace('Continue with ', '');
+                    alert(`In a real app, this would redirect to ${provider} authentication.`);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
