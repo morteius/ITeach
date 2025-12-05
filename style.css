@@ -41,12 +41,12 @@ html {
     color-scheme: light;
 }
 
-h1 { font-size: 2.5rem; }  /* 40px */
-h2 { font-size: 2rem; }    /* 32px */
-h3 { font-size: 1.5rem; }  /* 24px */
-h4 { font-size: 1.25rem; } /* 20px */
-body, p { font-size: 1rem; } /* 16px */
-small { font-size: 0.875rem; } /* 14px */
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.25rem; }
+body, p { font-size: 1rem; }
+small { font-size: 0.875rem; }
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -64,8 +64,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    background: var(--nav-dark-bg) !important;
-    backdrop-filter: blur(10px);
+    background: var(--nav-dark-bg) !important; 
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     z-index: 1000;
     padding: 0.8rem 0;
@@ -180,13 +179,40 @@ body {
     right: -300px;
     width: 300px;
     height: 100vh;
-    background: var(--nav-dark-bg) !important;
+    background: rgba(0, 31, 63, 0.95) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
     box-shadow: -5px 0 20px rgba(0, 0, 0, 0.3);
     padding: 2rem;
     list-style: none;
     z-index: 1001;
     transition: var(--transition);
     overflow-y: auto;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar > * {
+    opacity: 1 !important;
+    position: relative;
+    z-index: 2;
+}
+
+.sidebar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(0, 31, 63, 0.9) 0%,
+        rgba(0, 31, 63, 0.95) 50%,
+        rgba(0, 31, 63, 0.85) 100%
+    );
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    z-index: 1;
 }
 
 .sidebar.active {
@@ -305,7 +331,6 @@ body {
     margin: 2rem auto 0;
 }
 
-/* ===== HERO SECTION ===== */
 .hero-section {
     min-height: 90vh;
     display: flex;
@@ -446,7 +471,6 @@ body {
     }
 }
 
-/* ===== ANIMATIONS ===== */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -477,7 +501,6 @@ body {
     animation: slideIn 1s ease-out 0.3s both;
 }
 
-/* ===== FEATURES SECTION ===== */
 .features-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -516,7 +539,6 @@ body {
     line-height: 1.6;
 }
 
-/* ===== CTA SECTION ===== */
 .cta-section {
     padding: 6rem 2rem;
     background: linear-gradient(135deg, var(--primary-color), #003366);
@@ -560,7 +582,6 @@ body {
     margin-right: auto;
 }
 
-/* ===== NEWSLETTER ===== */
 .newsletter-content h2 {
     font-size: 2.2rem;
     color: var(--primary-color);
@@ -622,7 +643,6 @@ body {
     margin-top: 1rem;
 }
 
-/* ===== FOOTER ===== */
 .footer {
     background: var(--primary-color);
     color: white;
@@ -715,14 +735,13 @@ body {
     font-size: 0.9rem;
 }
 
-/* ===== BROWSER DARK MODE OVERRIDE ===== */
 @media (prefers-color-scheme: dark) {
     .logo-link img,
     .footer-logo-img {
         filter: brightness(1) saturate(1) !important;
         -webkit-filter: brightness(1) saturate(1) !important;
     }
-    /* Force navbar to stay dark */
+    
     .navbar, .sidebar {
         background: var(--nav-dark-bg) !important;
     }
@@ -733,7 +752,6 @@ body {
         fill: var(--nav-light-text) !important;
     }
     
-    /* Force rest of site to stay light */
     body, .hero-section, .features-section,
     .newsletter-section, .feature-card {
         background-color: #ffffff !important;
@@ -745,7 +763,6 @@ body {
     }
 }
 
-/* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 1024px) {
     .hero-title {
         font-size: 2.8rem;
@@ -762,18 +779,14 @@ body {
     }
     
     .navbar {
-        background: rgba(0, 31, 63, 0.9) !important;
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
+        background: var(--nav-dark-bg) !important;
         padding: 0.5rem 0;
     }
     
-    /* Hide desktop nav */
     .nav-links {
         display: none;
     }
     
-    /* Show hamburger menu */
     .menu-button {
         display: block;
         background: rgba(255, 255, 255, 0.1);
@@ -797,6 +810,66 @@ body {
     
     .logo-text {
         font-size: 1.3rem;
+    }
+    
+    .sidebar.active {
+        right: 0;
+        animation: slideIn 0.3s ease;
+    }
+    
+    @keyframes slideIn {
+        from {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+    
+    .sidebar li {
+        margin-bottom: 0.8rem;
+    }
+    
+    .sidebar a {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 0.8rem 1rem;
+        text-decoration: none;
+        color: var(--nav-light-text) !important;
+        border-radius: var(--border-radius);
+        transition: var(--transition);
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+    }
+    
+    .sidebar a:hover {
+        background: rgba(255, 255, 255, 0.15);
+        color: var(--nav-hover-color) !important;
+        transform: translateX(5px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .close-btn {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 2rem;
+    }
+    
+    .close-btn a {
+        padding: 0.5rem;
+        border-radius: 50%;
+        transition: var(--transition);
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .close-btn a:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: rotate(90deg);
     }
     
     .hero-content {
@@ -854,14 +927,13 @@ body {
     }
 }
 
-/* ===== SMALL MOBILE DEVICES ===== */
 @media (max-width: 480px) {
     .nav-container {
         padding: 0 1rem;
     }
 
     .navbar {
-        background: rgba(0, 31, 63, 0.85) !important;
+        background: var(--nav-dark-bg) !important;
     }
     
     .logo-link img {
@@ -870,6 +942,12 @@ body {
     
     .logo-text {
         font-size: 1.1rem;
+    }
+    
+    .sidebar {
+        width: 85%;
+        max-width: 280px;
+        padding: 1.5rem;
     }
     
     .hero-title {
@@ -894,12 +972,6 @@ body {
     .cta-section,
     .newsletter-section {
         padding: 3rem 1rem;
-    }
-    
-    .sidebar {
-        width: 85%;
-        max-width: 280px;
-        padding: 1.5rem;
     }
     
     .menu-button {
@@ -937,7 +1009,6 @@ body {
     transition: var(--transition);
 }
 
-/* ===== SCROLLBAR STYLING ===== */
 ::-webkit-scrollbar {
     width: 10px;
 }
