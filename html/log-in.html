@@ -64,9 +64,18 @@
             </div>
             
             <form class="login-form" id="login-form">
+                <div class="form-feedback info" id="form-feedback" style="display: none;">
+                    <i class="fas fa-info-circle"></i>
+                    <span id="feedback-message"></span>
+                </div>
+                
                 <div class="form-group">
                     <label for="email">Email Address</label>
                     <input type="email" id="email" class="form-input" placeholder="Enter your email" required>
+                    <div class="error-message" id="email-error">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <span>Please enter a valid email address</span>
+                    </div>
                 </div>
                 
                 <div class="form-group">
@@ -76,6 +85,16 @@
                         <button type="button" class="toggle-password" id="toggle-password">
                             <i class="fas fa-eye"></i>
                         </button>
+                    </div>
+                    <div class="error-message" id="password-error">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <span>Password must be at least 8 characters</span>
+                    </div>
+                    <div class="password-strength">
+                        <div class="strength-bar">
+                            <div class="strength-fill" id="strength-fill"></div>
+                        </div>
+                        <div class="strength-text" id="strength-text">Password strength</div>
                     </div>
                 </div>
                 
@@ -87,24 +106,26 @@
                     <a href="#" class="forgot-password">Forgot password?</a>
                 </div>
                 
-                <button type="submit" class="submit-btn">Log In</button>
+                <button type="submit" class="submit-btn" id="submit-btn">
+                    <span id="btn-text">Log In</span>
+                </button>
                 
                 <div class="login-divider">
                     <span>Or continue with</span>
                 </div>
                 
                 <div class="social-login">
-                    <button type="button" class="social-btn google">
+                    <button type="button" class="social-btn google" id="google-btn">
                         <i class="fab fa-google"></i>
                         <span>Continue with Google</span>
                     </button>
                     
-                    <button type="button" class="social-btn github">
+                    <button type="button" class="social-btn github" id="github-btn">
                         <i class="fab fa-github"></i>
                         <span>Continue with GitHub</span>
                     </button>
                     
-                    <button type="button" class="social-btn facebook">
+                    <button type="button" class="social-btn facebook" id="facebook-btn">
                         <i class="fab fa-facebook-f"></i>
                         <span>Continue with Facebook</span>
                     </button>
@@ -197,17 +218,16 @@
             });
         }
         
-        // Password toggle functionality
         document.addEventListener('DOMContentLoaded', function() {
+            // Password toggle functionality
             const togglePassword = document.getElementById('toggle-password');
-            const passwordInput = document.getElementById('password');
+            //const passwordInput = document.getElementById('password');
             
             if (togglePassword && passwordInput) {
                 togglePassword.addEventListener('click', function() {
                     const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
                     passwordInput.setAttribute('type', type);
                     
-                    // Toggle eye icon
                     const icon = this.querySelector('i');
                     if (type === 'text') {
                         icon.classList.remove('fa-eye');
@@ -219,8 +239,88 @@
                 });
             }
             
+            // Email validation
+            const emailInput = document.getElementById('email');
+            const emailError = document.getElementById('email-error');
+            
+            emailInput.addEventListener('input', function() {
+                const email = this.value;
+                const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+                
+                if (email === '') {
+                    this.classList.remove('error', 'success');
+                    emailError.classList.remove('show');
+                } else if (isValid) {
+                    this.classList.remove('error');
+                    this.classList.add('success');
+                    emailError.classList.remove('show');
+                } else {
+                    this.classList.remove('success');
+                    this.classList.add('error');
+                    emailError.classList.add('show');
+                }
+            });
+            
+            // Password strength checker
+            const passwordInput = document.getElementById('password');
+            const passwordError = document.getElementById('password-error');
+            const strengthFill = document.getElementById('strength-fill');
+            const strengthText = document.getElementById('strength-text');
+            
+            passwordInput.addEventListener('input', function() {
+                const password = this.value;
+                
+                if (password === '') {
+                    this.classList.remove('error', 'success');
+                    passwordError.classList.remove('show');
+                    strengthFill.className = 'strength-fill';
+                    strengthText.textContent = 'Password strength';
+                    return;
+                }
+                
+                // Check password strength
+                let strength = 0;
+                if (password.length >= 8) strength++;
+                if (/[A-Z]/.test(password)) strength++;
+                if (/[0-9]/.test(password)) strength++;
+                if (/[^A-Za-z0-9]/.test(password)) strength++;
+                
+                // Update strength indicator
+                strengthFill.className = 'strength-fill';
+                if (password.length < 8) {
+                    strengthFill.classList.add('weak');
+                    strengthText.textContent = 'Weak - at least 8 characters';
+                    this.classList.add('error');
+                    passwordError.classList.add('show');
+                } else {
+                    passwordError.classList.remove('show');
+                    this.classList.remove('error');
+                    
+                    if (strength <= 2) {
+                        strengthFill.classList.add('weak');
+                        strengthText.textContent = 'Weak';
+                        this.classList.add('error');
+                    } else if (strength === 3) {
+                        strengthFill.classList.add('medium');
+                        strengthText.textContent = 'Medium';
+                        this.classList.remove('error');
+                        this.classList.add('success');
+                    } else {
+                        strengthFill.classList.add('strong');
+                        strengthText.textContent = 'Strong';
+                        this.classList.remove('error');
+                        this.classList.add('success');
+                    }
+                }
+            });
+            
             // Form submission
             const loginForm = document.getElementById('login-form');
+            const submitBtn = document.getElementById('submit-btn');
+            const btnText = document.getElementById('btn-text');
+            const formFeedback = document.getElementById('form-feedback');
+            const feedbackMessage = document.getElementById('feedback-message');
+            
             if (loginForm) {
                 loginForm.addEventListener('submit', function(e) {
                     e.preventDefault();
@@ -228,22 +328,112 @@
                     const email = document.getElementById('email').value;
                     const password = document.getElementById('password').value;
                     
-                    if (email && password) {
-                        // In a real app, this would be sent to a server
-                        alert('Login successful! Welcome back to ITeach.');
-                        // You could redirect to dashboard here:
-                        // window.location.href = 'dashboard.html';
-                    } else {
-                        alert('Please enter both email and password');
-                    }
+                    // Reset feedback
+                    formFeedback.style.display = 'none';
+                    formFeedback.className = 'form-feedback';
+                    
+                    // Show loading state
+                    submitBtn.disabled = true;
+                    btnText.textContent = 'Logging in...';
+                    
+                    // Simulate API call delay
+                    setTimeout(() => {
+                        if (email && password) {
+                            formFeedback.style.display = 'flex';
+                            formFeedback.classList.add('success');
+                            feedbackMessage.textContent = 'Login successful! Welcome back to ITeach.';
+                            
+                            // Reset form after success
+                            setTimeout(() => {
+                                loginForm.reset();
+                                emailInput.classList.remove('success', 'error');
+                                passwordInput.classList.remove('success', 'error');
+                                strengthFill.className = 'strength-fill';
+                                strengthText.textContent = 'Password strength';
+                                formFeedback.style.display = 'none';
+                            }, 2000);
+                        } else {
+                            formFeedback.style.display = 'flex';
+                            formFeedback.classList.add('error');
+                            feedbackMessage.textContent = 'Please enter both email and password';
+                        }
+                        
+                        // Reset button
+                        submitBtn.disabled = false;
+                        btnText.textContent = 'Log In';
+                    }, 1500);
                 });
             }
             
             // Social login buttons
-            document.querySelectorAll('.social-btn').forEach(button => {
-                button.addEventListener('click', function() {
-                    const provider = this.querySelector('span').textContent.replace('Continue with ', '');
-                    alert(`In a real app, this would redirect to ${provider} authentication.`);
+            const socialButtons = {
+                google: document.getElementById('google-btn'),
+                github: document.getElementById('github-btn'),
+                facebook: document.getElementById('facebook-btn')
+            };
+            
+            Object.entries(socialButtons).forEach(([provider, button]) => {
+                if (button) {
+                    button.addEventListener('click', function() {
+                        // Show feedback
+                        formFeedback.style.display = 'flex';
+                        formFeedback.className = 'form-feedback info';
+                        feedbackMessage.textContent = `${provider.charAt(0).toUpperCase() + provider.slice(1)} authentication is currently under development.`;
+                        
+                        // Disable button temporarily
+                        button.disabled = true;
+                        const originalText = button.querySelector('span').textContent;
+                        button.querySelector('span').textContent = 'Working on it...';
+                        
+                        // Reset button after delay
+                        setTimeout(() => {
+                            button.disabled = false;
+                            button.querySelector('span').textContent = originalText;
+                            formFeedback.style.display = 'none';
+                        }, 2000);
+                    });
+                }
+            });
+            
+            // Forgot password link
+            const forgotPassword = document.querySelector('.forgot-password');
+            if (forgotPassword) {
+                forgotPassword.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    formFeedback.style.display = 'flex';
+                    formFeedback.className = 'form-feedback info';
+                    feedbackMessage.textContent = 'Password reset feature is coming soon.';
+                    
+                    setTimeout(() => {
+                        formFeedback.style.display = 'none';
+                    }, 3000);
+                });
+            }
+            
+            // Sign up link
+            const signupLink = document.querySelector('.signup-link a');
+            if (signupLink) {
+                signupLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    formFeedback.style.display = 'flex';
+                    formFeedback.className = 'form-feedback info';
+                    feedbackMessage.textContent = 'Sign up page is currently under development.';
+                    
+                    setTimeout(() => {
+                        formFeedback.style.display = 'none';
+                    }, 3000);
+                });
+            }
+            
+            // Real-time form validation
+            const inputs = document.querySelectorAll('.form-input');
+            inputs.forEach(input => {
+                input.addEventListener('blur', function() {
+                    if (this.value && !this.classList.contains('error')) {
+                        this.classList.add('success');
+                    }
                 });
             });
         });
