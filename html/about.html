@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light only">
+    <title>About Us | ITeach</title>
+    <link rel="stylesheet" href="../css/about.css">
+    <link rel="icon" href="../images/logo/icon.png" type="image/x-icon">
+    
+    <!-- FONT POPPINS -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- NAV BAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo-link">
+                <img src="../images/logo/logo.png" alt="ITeach Logo">
+            </a>
+            
+            <ul class="sidebar">
+                <li class="close-btn" onclick="hideSidebar()"> 
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px" fill="#fff">
+                            <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+                        </svg>
+                    </a>
+                </li>
+                <li><a href="../html/courses.html"><i class="fas fa-book"></i> Courses</a></li>
+                <li><a href="../html/resources.html"><i class="fas fa-folder-open"></i> Resources</a></li>
+                <li><a href="../html/tools.html"><i class="fas fa-tools"></i> Tools</a></li>
+                <li><a href="../html/about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="../html/faq.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                <li><a href="../html/log-in.html"><i class="fas fa-sign-in-alt"></i> Log In</a></li>
+            </ul>
+            
+            <ul class="nav-links">
+                <li><a href="../html/courses.html">Courses</a></li>
+                <li><a href="../html/resources.html">Resources</a></li>
+                <li><a href="../html/tools.html">Tools</a></li>
+                <li><a href="../html/about.html">About</a></li>
+                <li><a href="../html/faq.html">FAQ</a></li>
+                <li><a href="../html/log-in.html" class="login-btn">Log In</a></li>
+            </ul>
+            
+            <div class="menu-button" onclick="showSidebar()">
+                <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#fff">
+                    <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+                </svg>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+        <div class="header-content">
+            <h1 class="page-title">About ITeach</h1>
+            <p class="page-subtitle">Empowering IT students with free resources and tools for academic success</p>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about-section">
+        <div class="section-header">
+            <h2>Our Story</h2>
+            <p>Welcome to ITeach - a platform created by IT students, for IT students</p>
+        </div>
+
+        <!-- About Cards -->
+        <div class="about-cards">
+            <div class="about-card">
+                <div class="card-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3>Our Purpose</h3>
+                <p>ITeach was born from the realization that many IT students struggle to find comprehensive, organized, and free resources for their courses. We're here to bridge that gap.</p>
+            </div>
+
+            <div class="about-card">
+                <div class="card-icon">
+                    <i class="fas fa-hands-helping"></i>
+                </div>
+                <h3>Student-Driven</h3>
+                <p>Created by current BSIT students who understand the challenges of the curriculum. We know what you need because we need it too.</p>
+            </div>
+
+            <div class="about-card">
+                <div class="card-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h3>Future Vision</h3>
+                <p>Starting with first-year courses, we plan to expand to cover the entire IT curriculum and become the go-to resource hub for IT students nationwide.</p>
+            </div>
+        </div>
+
+        <!-- Mission & Vision -->
+        <div class="mission-vision">
+            <div class="mission-box">
+                <h3><i class="fas fa-bullseye"></i> Our Mission</h3>
+                <p>To provide high-quality, free educational resources and tools for Information Technology students. We strive to create an accessible platform where students can easily find study materials, courses, and tools to support their academic journey and enhance their understanding of IT concepts.</p>
+            </div>
+
+            <div class="vision-box">
+                <h3><i class="fas fa-eye"></i> Our Vision</h3>
+                <p>To become the leading free educational resource platform for IT students in the Philippines, empowering thousands of students to succeed academically and develop the skills needed for their future careers in technology.</p>
+            </div>
+        </div>
+
+        <!-- What We Offer -->
+        <div class="section-header">
+            <h2>What We Offer</h2>
+            <p>Comprehensive resources designed specifically for IT students</p>
+        </div>
+
+        <div class="about-cards">
+            <div class="about-card">
+                <div class="card-icon">
+                    <i class="fas fa-book-open"></i>
+                </div>
+                <h3>Structured Courses</h3>
+                <p>Organized course materials with downloadable resources, step-by-step guides, and comprehensive coverage of IT subjects.</p>
+            </div>
+
+            <div class="about-card">
+                <div class="card-icon">
+                    <i class="fas fa-video"></i>
+                </div>
+                <h3>Video Resources</h3>
+                <p>Curated YouTube tutorials and educational videos that complement course materials and provide visual learning.</p>
+            </div>
+
+            <div class="about-card">
+                <div class="card-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <h3>Practical Tools</h3>
+                <p>Essential software recommendations, programming tools, and utilities that every IT student needs for their projects.</p>
+            </div>
+        </div>
+
+        <!-- Team Section -->
+        <div class="section-header">
+            <h2>Created By Students</h2>
+            <p>Meet the team behind ITeach</p>
+        </div>
+
+        <div class="team-grid">
+            <div class="team-member">
+                <div class="member-avatar">
+                    <span>CM</span>
+                </div>
+                <h4>Charles James Mape</h4>
+                <p class="member-role">Founder & Developer</p>
+                <p>BSIT student passionate about making IT education accessible to all. Created ITeach to help fellow students succeed.</p>
+            </div>
+
+            <div class="team-member">
+                <div class="member-avatar">
+                    <span>IT</span>
+                </div>
+                <h4>IT Students</h4>
+                <p class="member-role">Community Contributors</p>
+                <p>Various IT students who contribute resources, provide feedback, and help improve the platform for everyone.</p>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="contact-section">
+            <h3>Connect With Us</h3>
+            <p>Have questions, suggestions, or want to contribute? We'd love to hear from you! Follow us on social media or reach out directly.</p>
+            
+            <div class="social-icons">
+                <a href="https://www.facebook.com/charlesjames.mape" class="social-icon" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"/>
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/morteius/" class="social-icon" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
+                    </svg>
+                </a>
+                <a href="https://twitter.com" class="social-icon" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path d="M459.4 151.7c.3 4.5 .3 9.1 .3 13.6 0 138.7-105.6 298.6-298.6 298.6-59.5 0-114.7-17.2-161.1-47.1 8.4 1 16.6 1.3 25.3 1.3 49.1 0 94.2-16.6 130.3-44.8-46.1-1-84.8-31.2-98.1-72.8 6.5 1 13 1.6 19.8 1.6 9.4 0 18.8-1.3 27.6-3.6-48.1-9.7-84.1-52-84.1-103v-1.3c14 7.8 30.2 12.7 47.4 13.3-28.3-18.8-46.8-51-46.8-87.4 0-19.5 5.2-37.4 14.3-53 51.7 63.7 129.3 105.3 216.4 109.8-1.6-7.8-2.6-15.9-2.6-24 0-57.8 46.8-104.9 104.9-104.9 30.2 0 57.5 12.7 76.7 33.1 23.7-4.5 46.5-13.3 66.6-25.3-7.8 24.4-24.4 44.8-46.1 57.8 21.1-2.3 41.6-8.1 60.4-16.2-14.3 20.8-32.2 39.3-52.6 54.3z"/>
+                    </svg>
+                </a>
+                <a href="https://youtube.com" class="social-icon" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                        <path d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="../images/logo/logo.png" alt="ITeach Logo" class="footer-logo-img">
+                <p>Empowering IT students with free resources since 2024.</p>
+            </div>
+            
+            <div class="footer-social">
+                <h4>Connect With Us</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/charlesjames.mape" class="social-icon" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/morteius/" class="social-icon" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://twitter.com" class="social-icon" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://youtube.com" class="social-icon" target="_blank">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../html/courses.html">Courses</a></li>
+                    <li><a href="../html/resources.html">Resources</a></li>
+                    <li><a href="../html/tools.html">Tools</a></li>
+                    <li><a href="../html/about.html">About Us</a></li>
+                    <li><a href="../html/faq.html">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; <script>document.write(new Date().getFullYear())</script> ITeach. All Rights Reserved. | Designed for IT Students</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script>
+        // Sidebar functions
+        function showSidebar() {
+            document.querySelector('.sidebar').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function hideSidebar() {
+            document.querySelector('.sidebar').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+        
+        // Close sidebar when clicking outside
+        document.addEventListener('click', function(event) {
+            const sidebar = document.querySelector('.sidebar');
+            const menuButton = document.querySelector('.menu-button');
+            
+            if (sidebar.classList.contains('active') && 
+                !sidebar.contains(event.target) && 
+                !menuButton.contains(event.target)) {
+                hideSidebar();
+            }
+        });
+        
+        // Mobile navbar scroll effect
+        const navbar = document.querySelector('.navbar');
+        if (window.innerWidth <= 768) {
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
